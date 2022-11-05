@@ -84,7 +84,8 @@ lualine.setup({
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { mode },
+		--lualine_a = { mode },
+		lualine_a = { },
 		lualine_b = { branch, diagnostics },
 		lualine_c = { "%f" },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
