@@ -1,4 +1,5 @@
 -- vim config
+require('impatient') -- speed plugins load
 require "user.options"
 require "user.plugins"
 require "user.colorscheme"
