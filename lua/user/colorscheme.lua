@@ -1,5 +1,5 @@
 
-vim.o.termguicolors = true
+--vim.o.termguicolors = true
 
 vim.cmd [[
 try
