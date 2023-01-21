@@ -8,14 +8,16 @@ local actions = require "telescope.actions"
 telescope.setup {
   defaults = {
 		layout_config = {
-			width = 0.95,
-			height = 0.95,
-			preview_width = 0.60,
-			height = {
-       padding = 0
-			},
-			width = {
-				padding = 0
+			horizontal = {
+				width = 0.95,
+				height = 0.95,
+				preview_width = 0.60,
+				height = {
+					padding = 0
+				},
+				width = {
+					padding = 0
+				}
 			}
 		},
     prompt_prefix = " ",
