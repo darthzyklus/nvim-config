@@ -4,9 +4,6 @@ return {
 			checkOnSave = {
 				command = "clippy"
 			},
-			onSave = {
-				command = "fmt"
-			}
 		}
 	}
 }
