@@ -104,7 +104,12 @@ telescope.setup {
     --   extension_config_key = value,
     -- }
     -- please take a look at the readme of the extension you want to configure
+		file_browser = {
+			theme = "ivy",
+			hijack_netrw = true,
+		}
   },
 }
 
 telescope.load_extension('dap')
+telescope.load_extension('file_browser')

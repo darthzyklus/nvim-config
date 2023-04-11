@@ -48,6 +48,14 @@ return packer.startup(function(use)
 	use "nvim-lualine/lualine.nvim"
 	use "akinsho/bufferline.nvim"
 
+ 	use {
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+			ts_update()
+		end,
+  }
+
 	-- Telescope
   use "nvim-telescope/telescope.nvim"
 
@@ -56,6 +64,21 @@ return packer.startup(function(use)
 
 	-- Harpoon
 	use 'ThePrimeagen/harpoon'
+
+	-- Refactoring
+	use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+        {"nvim-lua/plenary.nvim"},
+        {"nvim-treesitter/nvim-treesitter"}
+    }
+	}
+
+
+	use {
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+	}
 
   -- Colorschemes
   use "folke/tokyonight.nvim"

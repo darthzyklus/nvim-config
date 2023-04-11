@@ -34,6 +34,10 @@ keymap("n", "<leader>4", function() require("harpoon.ui").nav_file(4) end, opts)
 
 
 
-keymap("n", "<leader>f", function() require('telescope.builtin').find_files() end, opts)
+keymap("n", "<leader>f", function() require('telescope.builtin').find_files({ hidden = true }) end, opts)
+keymap("n", "<C-p>", function() require('telescope.builtin').git_files({ hidden = true }) end, opts)
+keymap("n", "<leader>g", function() require('telescope.builtin').live_grep({ previewer = false }) end, opts)
 keymap("n", "<leader>b", function() require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({ previewer = false })) end, opts)
 
+keymap("v", "<leader>rr","<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", opts)
+keymap("n", "<leader>w",":Telescope file_browser<CR>", { noremap = true })
