@@ -10,7 +10,8 @@ local fmt_group = vim.api.nvim_create_augroup('FORMATTING', { clear = true })
 
 nls.setup({
 	sources = {
-		fmt.rustfmt
+		fmt.rustfmt,
+		fmt.prettier,
 	},
 	on_attach = function(client, buf)
 		if client.supports_method('textDocument/formatting') then

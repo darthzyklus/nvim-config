@@ -1,5 +1,5 @@
 -- vim config
-require('impatient') -- speed plugins load
+require('impatient').enable_profile() -- speed plugins load
 require "user.options"
 require "user.plugins"
 require "user.lsp"
